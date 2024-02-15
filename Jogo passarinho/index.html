@@ -54,33 +54,33 @@ function create() { //adiciona os assetes
     
     }
 
-    function update() {
-        if (passarinho.x === 100) { 
-            passarinho.setFlip(false, false);
-            passarinho.ida = true; //define o passarinho.ida
-        }
-        if (passarinho.x < 700 && passarinho.ida === true) {
-            console.log('Vira para o outro lado');
-            passarinho.x += 5;
-        }
-        if (passarinho.x === 700) {
-            passarinho.setFlip(true, false); //quando chega na 'parede' ele vira
-            passarinho.ida = false;
-        }
-        if (passarinho.x > 100 && passarinho.ida === false) {
-            console.log('Passarinho Volta');
-            passarinho.x -= 2; //muda o sentido em que ele anda no eixo X
-        }
+function update() {
+    if (passarinho.x === 100) { 
+        passarinho.setFlip(false, false);
+        passarinho.ida = true; //define o passarinho.ida
+    }
+    if (passarinho.x < 700 && passarinho.ida === true) {
+        console.log('Vira para o outro lado');
+        passarinho.x += 5;
+    }
+    if (passarinho.x === 700) {
+        passarinho.setFlip(true, false); //quando chega na 'parede' ele vira
+        passarinho.ida = false;
+    }
+    if (passarinho.x > 100 && passarinho.ida === false) {
+        console.log('Passarinho Volta');
+        passarinho.x -= 2; //muda o sentido em que ele anda no eixo X
+    }
         
-        if (passarinho.y <= 550) { //enquanto mais baixo que 550 ele começa subir
-            passarinho.y -=1;
-        }
+    if (passarinho.y <= 550) { //enquanto mais baixo que 550 ele começa subir
+        passarinho.y -=1;
+    }
         
-        for (passarinho.y; passarinho.y<60; passarinho.y = 10) { //Faz o passarinho ficar em loop voltando para o meio da tela
-            passarinho.y += 240;
-            if (passarinho.y>100) break;
-        }
-        }
+    for (passarinho.y; passarinho.y<60; passarinho.y = 10) { //Faz o passarinho ficar em loop voltando para o meio da tela
+        passarinho.y += 240;
+        if (passarinho.y>100) break;
+    }
+    }
         
 </script>
 
